@@ -1,0 +1,12 @@
+{
+  "name": "makefood",
+  "version": "1",
+  "main": "index.js",
+  "repository": "https://github.com/jascott711/makefood",
+  "author": "jesse scott",
+  "license": "MIT",
+  "dependencies": {
+    "@vue/cli": "^3.11.0",
+    "vue": "^2.6.10"
+  }
+}
