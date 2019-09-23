@@ -66,5 +66,42 @@
         ]
       }
     }
+  },
+  {
+    "recipeID" : "0002",
+    "recipeName" : "Tomato Basil Chicken",
+    "recipeIngredients" : {
+      "ingredientComponent" : {
+        "ingredientComponentName" : "Ingredients",
+        "ingredients" : [
+          "4 pieces of chicken breasts",
+          "1 (5.5ml) can of tomato paste",
+          "1/4 cup of red wine vinegar",
+          "1/3 cup of red wine",
+          "3 tbsp of olive oil",
+          "1 tbsp of dried basil",
+          "1/2 tbsp of red pepper flakes",
+          "1/2 tbsp of salt",
+          "1/2 tbsp of pepper"
+        ]
+      }
+    },
+    "recipeUtensils" : [
+      "1 mixing bowls",
+      "1 baking dish",
+      "2.5L ziplock bag"
+    ],
+    "recipeDirections" : {
+      "directionComponent" : {
+        "directionComponentName" : "Topping",
+        "directions" : [
+          "Pre-heat oven to 375°.",
+          "Combine all ingredients except the chicken in a large mixing bowl.",
+          "Marinate chicken breast in the ziplock bag for at least 30 mins.",
+          "Place chicken breast in baking dish.",
+          "Bake (at 375°) for 15 minutes."
+        ]
+      }
+    }
   }
 ]

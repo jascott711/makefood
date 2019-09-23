@@ -5,12 +5,10 @@
       <div class="nav-option no-my-recipes" id="my-recipes"
            @click="showRecipes($event)">
         <span>My Recipes</span>
-        <span>{{areRecipesShowing}}</span>
       </div>
       <div class="nav-option no-my-preferences" id="my-preferences"
            @click="showPrefs($event)">
         <span>Preferences</span>
-        <span>{{arePrefsShowing}}</span>
       </div>
     </div>
   </div>
@@ -43,12 +41,12 @@
     background: $primary_color;
     color: $secondary_color;
     position: relative;
-    padding: 10px;
+    padding: 20px;
     text-align: left;
 
     h1 {
       display: inline-block;
-      color: #333;
+      color: $grey3;
       font-family: $secondary_font;
       font-size: 28px;
       margin: 0;
