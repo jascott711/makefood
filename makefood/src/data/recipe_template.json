@@ -1,0 +1,24 @@
+[
+  {
+    "recipeName" : "",
+    "recipeIngredients" : {
+      "ingredientComponent" : {
+        "ingredientComponentName" : "",
+        "ingredients" : [
+          ""
+        ]
+      }
+    },
+    "recipeUtensils" : [
+      ""
+    ],
+    "recipeDirections" : {
+      "directionComponent" : {
+        "directionComponentName" : "",
+        "directions" : [
+
+        ]
+      }
+    }
+  }
+]

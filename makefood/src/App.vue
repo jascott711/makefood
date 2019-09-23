@@ -1,22 +1,57 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="makefood"/>
+    <Header
+      v-bind:areRecipesShowing="areRecipesShowing"
+      v-bind:arePrefsShowing="arePrefsShowing"
+      v-on:show-recipes="setRecipesShowing($event)"
+      v-on:show-prefs="setPrefsShowing($event)"
+    ></Header>
+    <transition name="fade" id="content">
+      <MyRecipes v-if="areRecipesShowing"></MyRecipes>
+      <Preferences v-if="arePrefsShowing"></Preferences>
+    </transition>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Header from './components/Header'
+  import Header from './components/Header'
+  import MyRecipes from './components/MyRecipes'
+  import Preferences from './components/Preferences'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld,
-    Header
+  export default {
+    name: 'app',
+    components: {
+      Header,
+      MyRecipes,
+      Preferences
+    },
+    props: [
+      'getRecipes',
+      'getPrefs'
+    ],
+    data() {
+      return {
+        areRecipesShowing: true,
+        arePrefsShowing: false
+      }
+    },
+    methods: {
+      setRecipesShowing: function(showing){
+        this.areRecipesShowing = showing;
+      },
+      setPrefsShowing: function(showing){
+        this.arePrefsShowing = showing;
+      }
+    },
+    watch: {
+      getRecipes: function(showing){
+        this.areRecipesShowing = showing;
+      },
+      getPrefs: function(showing){
+        this.arePrefsShowing = showing;
+      }
+    }
   }
-}
 </script>
 
 <style lang="scss">

@@ -1,0 +1,70 @@
+[
+  {
+    "recipeID" : "0001",
+    "recipeName" : "Raspberry Lime Mini Cheese Cake",
+    "recipeIngredients" : {
+      "ingredientComponent" : {
+        "ingredientComponentName" : "Crust",
+        "ingredients" : [
+          "1 1/2 cup of graham-cracker crumbs",
+          "1/2 cup (1 stick) of melted butter",
+          "1/4 cup of sugar",
+          "parchment paper"
+        ]
+      },
+      "ingredientComponent" : {
+        "ingredientComponentName" : "Filling",
+        "ingredients" : [
+          "2 egg yolks",
+          "2 500ml bricks of cream cheese",
+          "1/2 cup of lime juice"
+        ]
+      },
+      "ingredientComponent" : {
+        "ingredientComponentName" : "Topping",
+        "ingredients" : [
+          "1 pint raspberries",
+          "1/2 tsp vanilla extract",
+          "1/4 cup of sugar"
+        ]
+      }
+    },
+    "recipeUtensils" : [
+      "2 large mixing bowls",
+      "a cupcake baking pan",
+      "sauce pan",
+      "whisk",
+      "serrated knife"
+    ],
+    "recipeDirections" : {
+      "directionComponent" : {
+        "directionComponentName" : "Crust",
+        "directions" : [
+          "Pre-heat oven to 350.",
+          "Combine graham-cracker crumbs and sugar in a large mixing bowl. Pour in melted butter",
+          "Cover the baking dish with parchment paper and press mixture one inch covering base and sides.",
+          "Bake for 12 minutes, until crust is light brown.",
+          "Cool for 30 minutes."
+        ]
+      },
+      "directionComponent" : {
+        "directionComponentName" : "Filling",
+        "directions" : [
+          "Combine 2 egg yolks and the condensed milk in a large mixing bowl. Whisk.",
+          "Add lemon juice while whisking, until smooth.",
+          "Pour mixture on top of crust, carefully around the edges to not overflow.",
+          "Bake for 15 minutes.",
+          "Let cool for 1 hour."
+        ]
+      },
+      "directionComponent" : {
+        "directionComponentName" : "Topping",
+        "directions" : [
+          "Combine a little water, 1 pint raspberries, vanilla extract and lime juice in the sauce pan",
+          "Reduce for 15 minutes or until fully broken down",
+          "Optional: run through a sifter for a smoother, less seedy sauce"
+        ]
+      }
+    }
+  }
+]
