@@ -1,50 +1,37 @@
 <template>
-  <div id="display-recipes">
-    <div class="recipe-list">
-      <div class="recipe-list-item"
-          v-for="recipe in recipes"
-          :key="recipe.recipeID"
-          @click="getCurrentRecipe($event, recipe)"
-          :class="recipe.recipeName === currentRecipe ? 'active' : '' ">
-        <div class="recipe-title">{{recipe.recipeName}}</div>
-      </div>
-    </div>
-    <div class="recipe-view">
-      <transition >
-        <div class="recipe"
-             v-if="currentRecipe"
-              :class="'recipe-'+currentRecipe.replace(/ /g,'-').toLowerCase()">
-          <div class="recipe-title">{{currentRecipe}}</div>
-          <div class="recipe-section recipe-section-ingredients">
-            <div class="recipe-section-heading">Ingredients</div>
-            <div class="recipe-item recipe-ingredient"
-                v-for="ingredient in currentIngredients">
-              <span v-html="ingredient"></span>
-            </div>
-          </div>
-          <div class="recipe-section recipe-section-utensils">
-            <div class="recipe-section-heading">Utensils</div>
-            <div class="recipe-item recipe-utensil"
-                v-for="utensil in currentUtensils">
-              <span v-html="utensil"></span>
-            </div>
-          </div>
-          <div class="recipe-section recipe-section-directions">
-            <div class="recipe-section-heading">Directions</div>
-            <div class="recipe-item recipe-direction"
-                v-for="direction in currentDirections">
-              <span v-html="direction"></span>
-            </div>
+  <div class="recipe-view">
+    <transition >
+      <div class="recipe"
+           v-if="currentRecipe"
+           :class="'recipe-'+currentRecipe.replace(/ /g,'-').toLowerCase()">
+        <div class="recipe-title">{{currentRecipe}}</div>
+        <div class="recipe-section recipe-section-ingredients">
+          <div class="recipe-section-heading">Ingredients</div>
+          <div class="recipe-item recipe-ingredient"
+               v-for="ingredient in currentIngredients">
+            <span v-html="ingredient"></span>
           </div>
         </div>
-      </transition>
-    </div>
+        <div class="recipe-section recipe-section-utensils">
+          <div class="recipe-section-heading">Utensils</div>
+          <div class="recipe-item recipe-utensil"
+               v-for="utensil in currentUtensils">
+            <span v-html="utensil"></span>
+          </div>
+        </div>
+        <div class="recipe-section recipe-section-directions">
+          <div class="recipe-section-heading">Directions</div>
+          <div class="recipe-item recipe-direction"
+               v-for="direction in currentDirections">
+            <span v-html="direction"></span>
+          </div>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
-  import recipes from '../data/recipes';
-
   export default {
     name: 'MyRecipes',
     props: [
@@ -55,17 +42,15 @@
     ],
     data: function() {
       return {
-        recipes
+        recipe
       }
     },
-    methods: {
+    computed: {
       getCurrentRecipe: function (e, recipe) {
         this.currentRecipe = recipe.recipeName;
         this.currentIngredients = recipe.recipeIngredients;
         this.currentUtensils = recipe.recipeUtensils;
         this.currentDirections = recipe.recipeDirections;
-
-        this.$emit('get-recipe', currentRecipe = this.currentRecipe);
       }
     }
   }
@@ -108,6 +93,8 @@
     }
     .recipe-view {
       .recipe {
+        transition: all 0.5s;
+
         .recipe-title {
           font-size: 24px;
           font-weight: 700;

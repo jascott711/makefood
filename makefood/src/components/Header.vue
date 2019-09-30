@@ -3,11 +3,13 @@
     <h1>makefood</h1>
     <div id="navigation">
       <div class="nav-option no-my-recipes" id="my-recipes"
-           @click="showRecipes($event)">
+           @click="showRecipes($event)"
+           :class="areRecipesShowing ? 'active' : ''">
         <span>My Recipes</span>
       </div>
       <div class="nav-option no-my-preferences" id="my-preferences"
-           @click="showPrefs($event)">
+           @click="showPrefs($event)"
+           :class="arePrefsShowing ? 'active' : ''">
         <span>Preferences</span>
       </div>
     </div>
@@ -39,15 +41,17 @@
 
   #header {
     background: $primary_color;
-    color: $secondary_color;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 20px;
     text-align: left;
 
     h1 {
       display: inline-block;
       color: $grey3;
-      font-family: $secondary_font;
+      font-family: $logo_font;
       font-size: 28px;
       margin: 0;
     }
@@ -58,9 +62,27 @@
       margin: 10px 0;
 
       .nav-option {
+        position: relative;
         display: inline-block;
+        color: $grey3;
+        font-family: $logo_font;
         font-size: 14px;
+        font-weight: 700;
+        text-transform: lowercase;
         padding: 0 20px 0 0;
+        &.active {
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            width: 20%;
+            height: 3px;
+            background: #343434;
+            margin: 0 auto;
+          }
+        }
       }
     }
 
@@ -80,8 +102,84 @@
           display: inline-block;
           font-size: 14px;
           padding: 0 10px;
+          cursor: pointer;
         }
       }
     }
   }
+
+  .fade-enter-active {
+    -webkit-animation: fadeInDown .5s;
+    animation: fadeInDown .5s;
+  }
+  .fade-leave-active {
+    -webkit-animation: fadeInUp .5s;
+    animation: fadeInUp .5s;
+  }
+
+  @-webkit-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+  }
+
+  @-webkit-keyframes fadeInUp {
+    from {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+  }
+
 </style>

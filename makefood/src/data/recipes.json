@@ -2,33 +2,21 @@
   {
     "recipeID" : "0001",
     "recipeName" : "Raspberry Lime Mini Cheese Cake",
-    "recipeIngredients" : {
-      "ingredientComponent" : {
-        "ingredientComponentName" : "Crust",
-        "ingredients" : [
-          "1 1/2 cup of graham-cracker crumbs",
-          "1/2 cup (1 stick) of melted butter",
-          "1/4 cup of sugar",
-          "parchment paper"
-        ]
-      },
-      "ingredientComponent" : {
-        "ingredientComponentName" : "Filling",
-        "ingredients" : [
-          "2 egg yolks",
-          "2 500ml bricks of cream cheese",
-          "1/2 cup of lime juice"
-        ]
-      },
-      "ingredientComponent" : {
-        "ingredientComponentName" : "Topping",
-        "ingredients" : [
-          "1 pint raspberries",
-          "1/2 tsp vanilla extract",
-          "1/4 cup of sugar"
-        ]
-      }
-    },
+    "recipeIngredients" : [
+      "<strong>Crust</strong>",
+      "1 1/2 cup of graham-cracker crumbs",
+      "1/2 cup (1 stick) of melted butter",
+      "1/4 cup of sugar",
+      "parchment paper",
+      "<strong>Filling</strong>",
+      "2 egg yolks",
+      "2 500ml bricks of cream cheese",
+      "1/2 cup of lime juice",
+      "<strong>Topping</strong>",
+      "1 pint raspberries",
+      "1/2 tsp vanilla extract",
+      "1/4 cup of sugar"
+    ],
     "recipeUtensils" : [
       "2 large mixing bowls",
       "a cupcake baking pan",
@@ -36,72 +24,50 @@
       "whisk",
       "serrated knife"
     ],
-    "recipeDirections" : {
-      "directionComponent" : {
-        "directionComponentName" : "Crust",
-        "directions" : [
-          "Pre-heat oven to 350.",
-          "Combine graham-cracker crumbs and sugar in a large mixing bowl. Pour in melted butter",
-          "Cover the baking dish with parchment paper and press mixture one inch covering base and sides.",
-          "Bake for 12 minutes, until crust is light brown.",
-          "Cool for 30 minutes."
-        ]
-      },
-      "directionComponent" : {
-        "directionComponentName" : "Filling",
-        "directions" : [
-          "Combine 2 egg yolks and the condensed milk in a large mixing bowl. Whisk.",
-          "Add lemon juice while whisking, until smooth.",
-          "Pour mixture on top of crust, carefully around the edges to not overflow.",
-          "Bake for 15 minutes.",
-          "Let cool for 1 hour."
-        ]
-      },
-      "directionComponent" : {
-        "directionComponentName" : "Topping",
-        "directions" : [
-          "Combine a little water, 1 pint raspberries, vanilla extract and lime juice in the sauce pan",
-          "Reduce for 15 minutes or until fully broken down",
-          "Optional: run through a sifter for a smoother, less seedy sauce"
-        ]
-      }
-    }
+    "recipeDirections" : [
+      "<strong>Crust</strong>",
+      "Pre-heat oven to 350.",
+      "Combine graham-cracker crumbs and sugar in a large mixing bowl. Pour in melted butter",
+      "Cover the baking dish with parchment paper and press mixture one inch covering base and sides.",
+      "Bake for 12 minutes, until crust is light brown.",
+      "Cool for 30 minutes.",
+      "<strong>Filling</strong>",
+      "Combine 2 egg yolks and the condensed milk in a large mixing bowl. Whisk.",
+      "Add lemon juice while whisking, until smooth.",
+      "Pour mixture on top of crust, carefully around the edges to not overflow.",
+      "Bake for 15 minutes.",
+      "Let cool for 1 hour.",
+      "<strong>Topping</strong>",
+      "Combine a little water, 1 pint raspberries, vanilla extract and lime juice in the sauce pan",
+      "Reduce for 15 minutes or until fully broken down",
+      "Optional: run through a sifter for a smoother, less seedy sauce"
+    ]
   },
   {
     "recipeID" : "0002",
     "recipeName" : "Tomato Basil Chicken",
-    "recipeIngredients" : {
-      "ingredientComponent" : {
-        "ingredientComponentName" : "Ingredients",
-        "ingredients" : [
-          "4 pieces of chicken breasts",
-          "1 (5.5ml) can of tomato paste",
-          "1/4 cup of red wine vinegar",
-          "1/3 cup of red wine",
-          "3 tbsp of olive oil",
-          "1 tbsp of dried basil",
-          "1/2 tbsp of red pepper flakes",
-          "1/2 tbsp of salt",
-          "1/2 tbsp of pepper"
-        ]
-      }
-    },
+    "recipeIngredients" : [
+      "4 pieces of chicken breasts",
+      "1 (5.5ml) can of tomato paste",
+      "1/4 cup of red wine vinegar",
+      "1/3 cup of red wine",
+      "3 tbsp of olive oil",
+      "1 tbsp of dried basil",
+      "1/2 tbsp of red pepper flakes",
+      "1/2 tbsp of salt",
+      "1/2 tbsp of pepper"
+    ],
     "recipeUtensils" : [
       "1 mixing bowls",
       "1 baking dish",
       "2.5L ziplock bag"
     ],
-    "recipeDirections" : {
-      "directionComponent" : {
-        "directionComponentName" : "Topping",
-        "directions" : [
-          "Pre-heat oven to 375°.",
-          "Combine all ingredients except the chicken in a large mixing bowl.",
-          "Marinate chicken breast in the ziplock bag for at least 30 mins.",
-          "Place chicken breast in baking dish.",
-          "Bake (at 375°) for 15 minutes."
-        ]
-      }
-    }
+    "recipeDirections" : [
+      "Pre-heat oven to 375°.",
+      "Combine all ingredients except the chicken in a large mixing bowl.",
+      "Marinate chicken breast in the ziplock bag for at least 30 mins.",
+      "Place chicken breast in baking dish.",
+      "Bake (at 375°) for 15 minutes."
+    ]
   }
 ]

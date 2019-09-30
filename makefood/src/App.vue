@@ -7,23 +7,27 @@
       v-on:show-prefs="setPrefsShowing($event)"
     ></Header>
     <transition name="fade" id="content">
-      <MyRecipes v-if="areRecipesShowing"></MyRecipes>
+      <MyRecipes v-if="areRecipesShowing" v-on:get-recipe="setRecipe($event)"></MyRecipes>
       <Preferences v-if="arePrefsShowing"></Preferences>
     </transition>
+    <RecipeView></RecipeView>
   </div>
 </template>
 
 <script>
+  import recipes from './data/recipes';
   import Header from './components/Header'
   import MyRecipes from './components/MyRecipes'
   import Preferences from './components/Preferences'
+  import RecipeView from './components/RecipeView'
 
   export default {
     name: 'app',
     components: {
       Header,
       MyRecipes,
-      Preferences
+      Preferences,
+      RecipeView
     },
     props: [
       'getRecipes',
@@ -31,6 +35,7 @@
     ],
     data() {
       return {
+        recipes,
         areRecipesShowing: true,
         arePrefsShowing: false
       }
@@ -41,6 +46,9 @@
       },
       setPrefsShowing: function(showing){
         this.arePrefsShowing = showing;
+      },
+      setRecipe: function(e){
+        this.recipes = e;
       }
     },
     watch: {
